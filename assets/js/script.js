@@ -1,5 +1,4 @@
 'use strict';
-alert("Script is loaded!");
 
 // Element toggle function
 const elementToggleFunc = function (elem) {
@@ -21,12 +20,9 @@ if (sidebarBtn) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-console.log("Number of navigation links:", navigationLinks.length);
-
 // Add event to all nav links
 navigationLinks.forEach(function (link) {
   link.addEventListener("click", function () {
-    alert("Clicked on " + this.dataset.page);
     const targetPage = this.textContent.trim().toLowerCase(); // Convert button text to match the section's data-page value
 
     // Remove 'active' class from all navigation links
