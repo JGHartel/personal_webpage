@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -135,25 +133,31 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
-
-// page navigation variables
+// Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+// Add event to all nav links
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    const targetPage = this.textContent.trim().toLowerCase();
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    // Remove 'active' class from all navigation links
+    navigationLinks.forEach((navLink) => {
+      navLink.classList.remove("active");
+    });
+
+    // Add 'active' class to the clicked navigation link
+    this.classList.add("active");
+
+    // Show the target page and hide others
+    pages.forEach((page) => {
+      if (page.dataset.page === targetPage) {
+        page.classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
       }
-    }
-
+    });
   });
-}
+});
