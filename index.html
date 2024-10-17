@@ -156,6 +156,9 @@
                     <button class="navbar-link" data-nav-link data-page="publications">Publications</button>
                 </li>
                 <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link data-page="talks">Talks</button> <!-- New "Talks" link -->
+                </li>
+                <li class="navbar-item">
                     <button class="navbar-link" data-nav-link data-page="contact">Contact</button>
                 </li>
                 </ul>
@@ -308,61 +311,6 @@
             </header>
 
             <section class="projects">
-            
-            <!-- Filter options (optional) -->
-            <ul class="filter-list">
-
-                <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-                </li>
-
-                <li class="filter-item">
-                <button data-filter-btn>Journal</button>
-                </li>
-
-                <li class="filter-item">
-                <button data-filter-btn>Conference</button>
-                </li>
-
-                <li class="filter-item">
-                <button data-filter-btn>Preprint</button>
-                </li>
-
-            </ul>
-
-            <div class="filter-select-box">
-
-                <button class="filter-select" data-select>
-
-                <div class="select-value" data-selecct-value>Select category</div>
-
-                <div class="select-icon">
-                    <ion-icon name="chevron-down"></ion-icon>
-                </div>
-
-                </button>
-
-                <ul class="select-list">
-
-                <li class="select-item">
-                    <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Journal</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Conference</button>
-                </li>
-
-                <li class="select-item">
-                    <button data-select-item>Preprint</button>
-                </li>
-
-                </ul>
-
-            </div>
 
                 <ul class="project-list">
 
@@ -397,6 +345,57 @@
         </article>
 
         <!--
+    - #TALKS
+-->
+        <article class="talks" data-page="talks">
+
+            <header>
+            <h2 class="h2 article-title">Talks</h2>
+            </header>
+        
+            <section class="projects">
+        
+            <ul class="project-list">
+        
+                <li class="project-item  active" data-filter-item data-category="conference">
+                <a href="#">
+        
+                    <figure class="project-img">
+                    <div class="project-item-icon-box">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/talks/talk1.jpg" alt="Talk 1" loading="lazy">
+                    </figure>
+        
+                    <h3 class="project-title">Conference Talk Title</h3>
+                    <p class="project-category">Conference Name</p>
+        
+                </a>
+                </li>
+        
+                <li class="project-item  active" data-filter-item data-category="invited">
+                <a href="#">
+        
+                    <figure class="project-img">
+                    <div class="project-item-icon-box">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/talks/talk2.jpg" alt="Talk 2" loading="lazy">
+                    </figure>
+        
+                    <h3 class="project-title">Invited Talk Title</h3>
+                    <p class="project-category">Institution Name</p>
+        
+                </a>
+                </li>
+        
+            </ul>
+        
+            </section>
+        
+        </article>
+
+        <!--
             - #CONTACT
         -->
 
@@ -409,7 +408,7 @@
                 <p class="about-text">
                 <!-- Replace with your contact information -->
                 <b>In Frankfurt: </b><br>
-                <a href="mailto:qian.chu@ae.mpg.de" style="display: inline;">qian.chu@ae.mpg.de</a><br>
+                <a href="mailto:{your.name}@ae.mpg.de" style="display: inline;">{your.name}@ae.mpg.de</a><br>
                 Neural Circuits, Consciousness, and Cognition Research Group<br>
                 Max Planck Institute for Empirical Aesthetics<br>
                 Grüneburgweg 14<br>
